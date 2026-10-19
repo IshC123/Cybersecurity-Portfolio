@@ -40,7 +40,7 @@ Evidence of each stage is in the [`/screenshots`](./screenshots) folder.
 
 
 ## Links
--  **Project Report** — [Download the report](./ITECH1502-Vulnversity-Report.docx)
+-  **Project Report** — [Download the report](https://github.com/IshC123/Cybersecurity-Portfolio/blob/main/ITECH1502-Vulnversity-Report.docx)
 -  **Video Presentation** — [Watch on YouTube](https://youtu.be/zZc-AgxrDPI?si=SVv5EAWuQy_IUcwa)
 -  **Screenshots / Evidence** — see the [`/screenshots`](./screenshots) folder
 
