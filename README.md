@@ -40,7 +40,7 @@ Evidence of each stage is in the [`/screenshots`](./screenshots) folder.
 
 
 ## Links
--  **Project Report** — [Download the report](./YOUR-FILENAME.docx)
+-  **Project Report** — [Download the report](./ ITECH1502 Final Project Report – Vulnversity (TryHackMe).docx)
 -  **Video Presentation** — [Watch on YouTube](https://youtu.be/zZc-AgxrDPI?si=SVv5EAWuQy_IUcwa)
 -  **Screenshots / Evidence** — see the [`/screenshots`](./screenshots) folder
 
