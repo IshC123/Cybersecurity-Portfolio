@@ -5,7 +5,7 @@ Ish Chander · Federation University
 
 ## Overview
 A hands-on web application penetration test of the **Vulnversity**  machine on
-**TryHackMe** that I completed for my final project **ITECH1502**. It demonstrates a full
+**TryHackMe** that I completed for my final project **ITECH1502**. It shows a full
 attack chain. From reconnaissance to full administrator (root) access and controls to prevent each weakness.
 ## Platform & Tools
 - **Platform:** TryHackMe (browser-based labs with live VMs)
@@ -17,7 +17,7 @@ attack chain. From reconnaissance to full administrator (root) access and contro
 
 ## The Attack Chain
 1. **Reconnaissance** — Nmap found 6 open ports and an Apache web server on port 3333.
-2. **Enumeration** — Gobuster uncovered a hidden `/internal` upload page.
+2. **Enumeration** — Gobuster found a hidden `/internal` upload page.
 3. **Exploitation** — bypassed the upload filter with a `.phtml` extension and
    uploaded a PHP reverse shell, gaining a foothold as `www-data`.
 4. **Privilege Escalation** — abused a misconfigured SUID bit on `/bin/systemctl`
@@ -31,11 +31,13 @@ attack chain. From reconnaissance to full administrator (root) access and contro
 | Weak file-type block-list (`.phtml` allowed) | Remote code execution |
 | SUID on `/bin/systemctl` | Full root compromise |
 
-## Screenshots
-Evidence of each stage is in the [`/screenshots`](./screenshots) folder.
 
 ## Lessons Learned
 Small individual weaknesses plus a weak upload filter and one misconfigured SUID binary can be chained into a full system compromise. This project made the principles of **defence in depth** and **least privilege** stick with me and reflects the daily work of an SOC analyst and penetration tester.
+
+## Screenshots
+Evidence of each stage is in the [`/screenshots`](./screenshots) folder.
+
 
 ## Links
 - 📄 **Project Report** — see the [`/report`](./report) folder
