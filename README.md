@@ -16,20 +16,24 @@ attack chain. From reconnaissance to full administrator (root) access and contro
 - **Linux** — privilege escalation via SUID
 
 ## The Attack Chain
-1. **Reconnaissance** — Nmap found 6 open ports and an Apache web server on port 3333.
-2. **Enumeration** — Gobuster found a hidden `/internal` upload page.
-3. **Exploitation** — bypassed the upload filter with a `.phtml` extension and
-   uploaded a PHP reverse shell, gaining a foothold as `www-data`.
-4. **Privilege Escalation** — abused a misconfigured SUID bit on `/bin/systemctl`
-   to gain root.
+1. **Reconnaissance** — I started with an Nmap scan, which turned up 6 open ports
+   and an Apache web server sitting on port 3333.
+2. **Enumeration** — Running Gobuster against that server uncovered a hidden
+   `/internal` page where files could be uploaded.
+3. **Exploitation** — The upload page tried to block dangerous files, but its filter
+   was weak. I slipped a `.phtml` file past it, uploaded a PHP reverse shell, and
+   landed a foothold on the server as the `www-data` user.
+4. **Privilege Escalation** — From there I found that `/bin/systemctl` had a
+   misconfigured SUID bit, and abused it to escalate all the way to root.
 
+   
 ## Key Findings
-| Weakness | Impact |
+| Weakness | What it allowed |
 | --- | --- |
-| Web server on non-standard port 3333 | Larger attack surface |
-| Hidden `/internal` upload page | Reachable without authentication |
-| Weak file-type block-list (`.phtml` allowed) | Remote code execution |
-| SUID on `/bin/systemctl` | Full root compromise |
+| Web server on an unusual port (3333) | A wider attack surface once discovered |
+| Hidden `/internal` upload page | Access without any authentication |
+| Weak file-type filter (`.phtml` slipped through) | Remote code execution on the server |
+| SUID set on `/bin/systemctl` | The final step to full root access |
 
 
 ## Lessons Learned
