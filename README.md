@@ -1,20 +1,17 @@
-# Cybersecurity-Portfolio
 # Cybersecurity Portfolio — Vulnversity Penetration Test
 
 **ITECH1502 Cybersecurity Fundamentals — Final Project**
-ISH CHANDER
+Ish Chander · Federation University
 
 ## Overview
-A hands-on web application penetration test of the **Vulnversity** machine on
-**TryHackMe**, completed as my ITECH1502 final project. It demonstrates a full
-attack chain — from reconnaissance to full administrator (root) access — and
-the controls that prevent each weakness.
-
+A hands-on web application penetration test of the **Vulnversity**  machine on
+**TryHackMe** that I completed for my final project **ITECH1502**. It demonstrates a full
+attack chain. From reconnaissance to full administrator (root) access and controls to prevent each weakness.
 ## Platform & Tools
 - **Platform:** TryHackMe (browser-based labs with live VMs)
 - **Nmap** — network scanning and service enumeration
-- **Gobuster** — directory brute-forcing
-- **Burp Suite** — upload-filter fuzzing (Intruder)
+- **Gobuster** — directory brute forcing
+- **Burp Suite** — upload-filter testing (Intruder)
 - **Netcat** — reverse-shell listener
 - **Linux** — privilege escalation via SUID
 
@@ -35,14 +32,15 @@ the controls that prevent each weakness.
 | SUID on `/bin/systemctl` | Full root compromise |
 
 ## Screenshots
- 
+Evidence of each stage is in the [`/screenshots`](./screenshots) folder.
 
 ## Lessons Learned
-Small, individually minor weaknesses chain together into full compromise.
-Strong defences — validating uploads by content, least privilege, and auditing
-SUID binaries — break that chain. I also strengthened my troubleshooting skills
-working through proxy setup, session timeouts and shell timing.
+Small individual weaknesses plus a weak upload filter and one misconfigured SUID binary can be chained into a full system compromise. This project made the principles of **defence in depth** and **least privilege** stick with me and reflects the daily work of an SOC analyst and penetration tester.
 
 ## Links
+- 📄 **Project Report** — see the [`/report`](./report) folder
+- 🎥 **Video Presentation** — [Watch on YouTube](https://youtu.be/zZc-AgxrDPI?si=SVv5EAWuQy_IUcwa)
+- 🖼️ **Screenshots / Evidence** — see the [`/screenshots`](./screenshots) folder
 
-*Completed for ITECH1502, Federation University.*
+---
+*Completed for ITECH1502, Federation University, 2026.*
