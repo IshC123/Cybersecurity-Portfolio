@@ -40,9 +40,9 @@ Evidence of each stage is in the [`/screenshots`](./screenshots) folder.
 
 
 ## Links
-- 📄 **Project Report** — see the [`/report`](./report) folder
-- 🎥 **Video Presentation** — [Watch on YouTube](https://youtu.be/zZc-AgxrDPI?si=SVv5EAWuQy_IUcwa)
-- 🖼️ **Screenshots / Evidence** — see the [`/screenshots`](./screenshots) folder
+-  **Project Report** — [Download the report](./YOUR-FILENAME.docx)
+-  **Video Presentation** — [Watch on YouTube](https://youtu.be/zZc-AgxrDPI?si=SVv5EAWuQy_IUcwa)
+-  **Screenshots / Evidence** — see the [`/screenshots`](./screenshots) folder
 
 ---
 *Completed for ITECH1502, Federation University, 2026.*
